@@ -61,10 +61,9 @@ stage('Install Dependencies') {
         }
 stage('Docker Build') {
     steps {
-        sh 'docker build -t netflix-clone -f netflix-ui/Dockerfile .'
+        sh 'docker build -t netflix-clone .'
     }
 }
-
         stage('Docker Image Scan') {
             steps {
                 sh 'trivy image netflix-clone'
