@@ -59,7 +59,7 @@ stage('Install Dependencies') {
                 sh 'trivy fs .'
             }
         }
-tage('Docker Build') {
+stage('Docker Build') {
     steps {
         sh 'docker build -t netflix-clone -f netflix-ui/Dockerfile netflix-ui'
     }
