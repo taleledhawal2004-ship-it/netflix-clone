@@ -61,7 +61,7 @@ stage('Install Dependencies') {
         }
 stage('Docker Build') {
     steps {
-        dir('netflix-ui') {
+        dir('netflix-api') {
             sh 'docker build -t netflix-clone .'
         }
     }
